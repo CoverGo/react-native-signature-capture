@@ -195,6 +195,8 @@
 
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths firstObject];
+
+  // store png file in documents directory
 	NSString *tempPath = [documentsDirectory stringByAppendingFormat:@"/signature.png"];
 
 	//remove if file already exists
@@ -215,6 +217,12 @@
 
 		NSString *base64Encoded = [imageData base64EncodedStringWithOptions:0];
 		[self.manager publishSaveImageEvent: tempPath withEncoded:base64Encoded];
+
+    // remove png file frm directory
+    [[NSFileManager defaultManager] removeItemAtPath:tempPath error:&error];
+		if (error) {
+			NSLog(@"Error: %@", error.debugDescription);
+		}
 	}
 }
 
