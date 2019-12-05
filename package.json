@@ -1,6 +1,6 @@
 {
-  "name": "@carentogruppe/react-native-signature-capture",
-  "version": "0.4.13",
+  "name": "@CoverGo/react-native-signature-capture",
+  "version": "0.4.14",
   "description": "Lets users sign their signatures",
   "main": "SignatureCapture.js",
   "scripts": {
@@ -19,10 +19,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carentogruppe/react-native-signature-capture.git"
+    "url": "git+https://github.com/CoverGo/react-native-signature-capture.git"
   },
   "bugs": {
-    "url": "https://github.com/carentogruppe/react-native-signature-capture/issues"
+    "url": "https://github.com/CoverGo/react-native-signature-capture/issues"
   },
-  "homepage": "https://github.com/carentogruppe/react-native-signature-capture#readme"
+  "homepage": "https://github.com/CoverGo/react-native-signature-capture#readme"
 }
