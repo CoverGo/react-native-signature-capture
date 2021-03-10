@@ -1,6 +1,6 @@
 {
   "name": "@CoverGo/react-native-signature-capture",
-  "version": "0.4.14",
+  "version": "1.0.0",
   "description": "Lets users sign their signatures",
   "main": "SignatureCapture.js",
   "scripts": {
