@@ -37,7 +37,8 @@ class SignatureCapture extends React.Component {
                 return;
             }
             this.props.onDragEvent({
-                dragged: event.nativeEvent.dragged
+                dragged: event.nativeEvent.dragged,
+                encoded: event.nativeEvent.encoded,
             });
         }
     }
