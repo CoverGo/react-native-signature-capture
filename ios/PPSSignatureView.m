@@ -414,11 +414,7 @@ static PPSSignaturePoint ViewPointToGL(CGPoint viewPoint, CGRect bounds, GLKVect
 		addVertex(&length, previousVertex);
 		
 		self.hasSignature = YES;
-	  UIImage *signImage = [self.sign signatureImage: _rotateClockwise withSquare:_square];
-	  // Convert UIImage object into NSData (a wrapper for a stream of bytes) formatted according to PNG spec
-	  NSData *imageData = UIImagePNGRepresentation(signImage);
-	  NSString *base64Encoded = [imageData base64EncodedStringWithOptions:0];
-	  [self.manager publishDraggedEvent: base64Encoded];
+		[self.manager publishDraggedEvent];
 		
 	} else if ([p state] == UIGestureRecognizerStateChanged) {
 		
