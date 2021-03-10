@@ -52,10 +52,13 @@ RCT_EXPORT_METHOD(resetImage:(nonnull NSNumber *)reactTag) {
 					}];
 }
 
--(void) publishDraggedEvent {
+-(void) publishDraggedEvent: (NSString *) aEncoded {
 	[self.bridge.eventDispatcher
 	 sendDeviceEventWithName:@"onDragEvent"
-	 body:@{@"dragged": @YES}];
+	 body:@{
+          @"dragged": @YES,
+          @"encoded": aEncoded
+          }];
 }
 
 @end
